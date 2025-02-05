@@ -28,12 +28,10 @@ class Shop:
     def purchase_receipt(self, customer: Customer) -> None:
         shopping_list = [
             f"{customer.product_cart[product]} {product}s for "
-            f"{
-                int(customer.product_cart[product] * self.products[product])
+            f"{int(customer.product_cart[product] * self.products[product])
                 if customer.product_cart[product] * self.products[product]
                 == int(customer.product_cart[product] * self.products[product])
-                else customer.product_cart[product] * self.products[product]
-            } dollars\n"
+                else customer.product_cart[product] * self.products[product]} dollars\n"
             for product in customer.product_cart
             if product in self.products
         ]
