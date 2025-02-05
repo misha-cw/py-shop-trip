@@ -44,7 +44,7 @@ class Shop:
             f"Date: {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n"
             f"Thanks, {customer.name}, for your purchase!\n"
             "You have bought:\n"
-            f"{"".join(shopping_list)}"
+            f"{''.join(shopping_list)}"
             f"""Total cost is {sum(
                 [
                     self.products[product] * customer.product_cart[product]
