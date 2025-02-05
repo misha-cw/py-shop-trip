@@ -29,11 +29,11 @@ class Shop:
         shopping_list = [
             f"{customer.product_cart[product]} {product}s for "
             f"{
-            int(customer.product_cart[product] * self.products[product])
-            if customer.product_cart[product] * self.products[product] ==
-            int(customer.product_cart[product] * self.products[product])
-            else customer.product_cart[product] * self.products[product]
-             } dollars\n"
+                int(customer.product_cart[product] * self.products[product])
+                if customer.product_cart[product] * self.products[product]
+                == int(customer.product_cart[product] * self.products[product])
+                else customer.product_cart[product] * self.products[product]
+            } dollars\n"
             for product in customer.product_cart
         ]
         print(
