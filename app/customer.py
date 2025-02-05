@@ -61,6 +61,9 @@ class Customer:
 
     def come_back_home(self, cost_of_the_trip: float) -> None:
         print(f"{self.name} rides home")
+
         self.location = self.home_location
+        self.home_location = None
         self.money -= cost_of_the_trip
+
         print(f"{self.name} now has {self.money} dollars\n")

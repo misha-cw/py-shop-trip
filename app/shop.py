@@ -35,6 +35,7 @@ class Shop:
                 else customer.product_cart[product] * self.products[product]
             } dollars\n"
             for product in customer.product_cart
+            if product in self.products
         ]
         print(
             f"Date: {datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}\n"
@@ -45,6 +46,7 @@ class Shop:
                 [
                     self.products[product] * customer.product_cart[product]
                     for product in customer.product_cart
+                    if product in self.products
                 ]
             )} dollars\n"
             "See you again!\n"
