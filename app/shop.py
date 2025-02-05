@@ -45,12 +45,12 @@ class Shop:
             f"Thanks, {customer.name}, for your purchase!\n"
             "You have bought:\n"
             f"{"".join(shopping_list)}"
-            f"Total cost is {sum(
+            f"""Total cost is {sum(
                 [
                     self.products[product] * customer.product_cart[product]
                     for product in customer.product_cart
                     if product in self.products
                 ]
-            )} dollars\n"
+            )} dollars\n"""
             "See you again!\n"
         )
