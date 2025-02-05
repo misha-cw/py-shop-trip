@@ -39,6 +39,7 @@ class Shop:
             for product in customer.product_cart
             if product in self.products
         ]
+
         print(
             f"Date: {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n"
             f"Thanks, {customer.name}, for your purchase!\n"
